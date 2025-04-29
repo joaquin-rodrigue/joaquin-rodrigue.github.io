@@ -89,3 +89,9 @@ section {
 .github-link {
     margin-top: 20px !important;
 }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
