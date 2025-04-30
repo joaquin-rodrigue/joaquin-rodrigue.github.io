@@ -82,6 +82,11 @@ h2, h3 {
     color: black;
 }
 
+.grey {
+    background-color: #a8aac4;
+    color: black;
+}
+
 section {
     padding: 24px 12px; 
 }
@@ -94,4 +99,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
