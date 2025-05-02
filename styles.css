@@ -7,13 +7,13 @@
     Dark: #231826
 */
 
-/* ---Global changes--- */
+/* --- Global changes --- */
 body {
     margin: 0;
     background-color: #F4F7F5;
 }
 
-/* ---Nav bar--- */
+/* --- Nav bar --- */
 nav {
     position: fixed;
     top: 0;
@@ -45,7 +45,7 @@ nav ul li a:hover {
     color: #76C35C;
 }
 
-/* ---Header/Top--- */
+/* --- Header/Top --- */
 #top h1 {
     text-align: center;
     font-size: 3em;
@@ -56,8 +56,7 @@ h2, h3 {
     text-align: center;
 }
 
-/* ---Content sections--- */
-
+/* --- Content sections --- */
 #about, #platform, #monopolar {
     background-color: #231826;
     color: white;
@@ -91,10 +90,16 @@ section {
     padding: 24px 12px; 
 }
 
+/* --- GitHub links --- */
 .github-link {
     margin-top: 20px !important;
 }
 
+.github-link a {
+    color: black;
+}
+
+/* --- Footer --- */
 .footer {
     display: flex;
     flex-direction: column;
