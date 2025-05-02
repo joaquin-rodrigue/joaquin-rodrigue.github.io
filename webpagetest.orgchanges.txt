@@ -1,0 +1,4 @@
+(Added for the sake of an assignment - these are changes I made though if you want to read it, random strangers)
+
+Change 1: Load script and css tags with async, making loading faster
+Change 2: Lazy loading images
