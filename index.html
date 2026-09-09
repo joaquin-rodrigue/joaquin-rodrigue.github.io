@@ -8,167 +8,126 @@
     <title>Joaquin Rodriguez</title>
     <link href="styles.css" rel="stylesheet" type="text/css" async>
     
-    <!-- Bootstrap -->
+    <!-- Bootstrap
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" async>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" async></script> -->
 
     <!-- From favicon.io where I generated the ico files -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="#top">Top</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#cms">CMS</a></li>
-            <li><a href="#platform">Platform Fighter</a></li>
-            <li><a href="#buried">Buried</a></li>
-            <li><a href="#monopolar">MonopolAR</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<body class="darkmode">
+    <aside>
+        <header id="top">
+            <h1>Joaquin Rodriguez</h1>
+        </header>
 
-    <header id="top">
-        <h1>Joaquin Rodriguez</h1>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4 white">
-                    <p>I&apos;m Joaquin Rodriguez, a software and game developer in Boise State&apos;s Games, Interactive Media and Mobile Technology program. I&apos;m here to show off various projects I&apos;ve worked on throughout the past few years. Enjoy!</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="red img-fluid" src="me.jpg" alt="Image of me" loading="lazy">
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-    </section>
+        <nav>
+            <ul>
+                <li><button id="jumptoabout">About</button></li>
+                <li><button id="jumptopermafrost">Permafrost</button></li>
+                <li><button id="jumptocms">CMS</button></li>
+                <li><button id="jumptoplatform">Platform Fighter</button></li>
+                <li><button id="jumptoburied">Buried</button></li>
+            </ul>
+        </nav>
+    </aside>
 
     <main>
-        <h2 class="white">Portfolio</h2>
-
-        <section id="cms">
-            <h3>A Simple CMS</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4">
-                        <img class="green img-fluid" src="simple-cms.png" alt="Image of the website" loading="lazy">
-                    </div>
-                    <div class="col-md-4 white">
-                        <p>This website makes several features of a Content Management System in a simple manner using Node.js, Express, and MySQL. </p>
-                        <p>I&apos;m learning a lot about generating SQL dynamically, server-side code, working with cookies, building webpages, proper CSS, database structures, database management, and other general JavaScript while working with this website.</p>
-                        <p>It&apos;s been fun designing simple but functional UI/UX, and learning how some more complex server features work beyond what is being taught in classes.</p>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8 white github-link">
-                        <p>You can find the GitHub repo for this project here: <a href="https://github.com/joaquin-rodrigue/simple-cms">https://github.com/joaquin-rodrigue/simple-cms</a></p>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-            </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <article>
+                <p>I&apos;m Joaquin Rodriguez, a software and game developer in Boise State&apos;s Games, Interactive Media and Mobile Technology program. I&apos;m here to show off various projects I&apos;ve worked on throughout the past few years. Enjoy!</p>
+            </article>
+            <aside>
+                <img src="me.jpg" alt="Image of me" loading="lazy">
+            </aside>
         </section>
 
-        <section id="platform">
-            <h3>A Platform Fighter Demo</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4 white">
-                        <p>This Unity game is a demo concept of a 3-dimensional Platform Fighter game, akin to Super Smash Bros.</p>
-                        <p>I got to learn both how to implement multiplayer controls and got plenty of practice with Unity coding practices such as coroutines during this project.</p>
-                        <p>The fun from this project came from both creating ideas for the different placeholder characters and developing the system behind this game&apos;s combat.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="green img-fluid" src="platform-fighter-demo.png" alt="Image of the Platform Fighter game" loading="lazy">
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8 white github-link">
-                        <p>You can find the GitHub repo for this project here: <a href="https://github.com/joaquin-rodrigue/platform-fighter-3d">https://github.com/joaquin-rodrigue/platform-fighter-3d</a></p>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-            </div>
+        <section id="permafrost" class="hide">
+            <h2>Permafrost</h2>
+            <article>
+                <p>An open-world survival horror game made in Unity, combining procedurally generated terrain with resource management and state machine based enemies.</p>
+                <p>This is my largest project to date, and involved every aspect of indie game development. Programming, systems, 3D art and animation, sound design, UX testing, and more.</p>
+                <p>I am still developing this game, but plan to publish and release it within the next year.</p>
+            </article>
+            <aside>
+                <img alt="Image of the game Permafrost, currently missing" loading="lazy">
+                <p><a href="https://github.com/joaquin-rodrigue/permafrost">Here&apos;s the project&apos;s github repo: https://github.com/joaquin-rodrigue/permafrost</a></p>
+            </aside>
         </section>
 
-        <section id="buried">
-            <h3>Buried</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4">
-                        <img class="green img-fluid" src="Buried.png" alt="Image of the game" loading="lazy">
-                    </div>
-                    <div class="col-md-4 white">
-                        <p>This is an old project I&apos;ve recently brought up to speed with more recent projects of mine. This game made in Unity is a 2-dimensional platformer made from scratch in art and programming.</p>
-                        <p>I got to work with both programming in Unity and developing art assets, and more recently I&apos;ve updated other aspects of the project using modern Unity features. I also originally developed the project with AR integration via an Ultraleap hand tracking sensor, but unfortunately I have not had much access to it since and these features may be out of date now.</p>
-                        <p>This project was really the first full game I made using Unity, I found not only designing the game but building the levels, art, adding in gameplay features, and generally every part of the process was enjoyable.</p>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8 white github-link">
-                        <p>You can find the GitHub repo for this project here: <a href="https://github.com/joaquin-rodrigue/Buried">https://github.com/joaquin-rodrigue/Buried</a></p>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-            </div>
+        <section id="cms" class="hide">
+            <h2>A Simple CMS</h2>
+            <article>
+                <p>This website makes several features of a Content Management System in a simple manner using Node.js, Express, and MySQL. </p>
+                <p>Making this involved a little of everything, including (but not limited to) dynamic SQL, server-side logic, handling cookies, dynamicly building webpages and CSS, database structuring and management, general JavaScript development, and more.</p>
+                <p>It&apos;s certainly an older project now, but designing complex server and clientside logic, along with a deep look into how web based JavaScript works made it worth it.</p>
+            </article>
+            <aside>
+                <img src="simple-cms.png" alt="Image of the CMS website front page" loading="lazy">
+                <p><a href="https://github.com/joaquin-rodrigue/simple-cms">Here&apos;s the project&apos;s GitHub repo: https://github.com/joaquin-rodrigue/simple-cms</a></p>
+            </aside>
         </section>
 
-        <section id="monopolar">
-            <h3>MonopolAR</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4 white">
-                        <p>This group project I worked on led to my team recreating Monopoly through a phone-based AR system. We emulated the gameplay from a phone, playable by using a Monopoly board to allow showing off a 3-dimensional monopoly simulation.</p>
-                        <p>I worked mostly on developing the AR integration with this project, but also worked on other features of Monopoly such as the player&apos;s ability to get cards and interactions with board squares.</p>
-                        <p>Some of the group I worked on this project with are good friends still to this day, and I found the challenge of trying to understand AR and the various hardware problems we encountered alongside it to be fun. The hardware problems were fairly tedious, but otherwise the project was great.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="green img-fluid" src="" alt="Unsure what to put here yet" loading="lazy">
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8 white github-link">
-                        <p>The GitHub repo for this project was made by one of my group members: <a href="https://github.com/GavinTafoya/MonopolAr">https://github.com/GavinTafoya/MonopolAr</a></p>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-            </div>
+        <section id="platform" class="hide">
+            <h2>A Platform Fighter Demo</h2>
+            <article>
+                <p>This Unity game is a demo concept of a 3-dimensional Platform Fighter game, akin to Super Smash Bros.</p>
+                <p>The game utilizes local multiplayer controls and other general Unity programming.</p>
+                <p>The project is still a demo, but the idea was unique and I am considering fleshing out the ideas further going forward.</p>
+            </article>
+            <aside>
+                <img src="platform-fighter-demo.png" alt="Image of the Platform Fighter game demo" loading="lazy">
+                <p><a href="https://github.com/joaquin-rodrigue/platform-fighter-3d">Here&apos;s the project&apos;s GitHub repo: https://github.com/joaquin-rodrigue/platform-fighter-3d</a></p>
+            </aside>
+        </section>
+
+        <section id="buried" class="hide">
+            <h2>Buried</h2>
+            <article>
+                <p>This is an old project that was one of my first individual projects in Unity. The game is a 2D platformer using pixel art, level design and programmming made mostly from scratch.</p>
+                <p>I came back to this project a few times to add some better practice features, and originally used it as a demo for an AR integration using Ultraleap hand tracking sensors.</p>
+                <p>When I say old, I mean 3 years ago, but the project was a great introduction to both many Unity features and the AR technology I got to use at the time. Unfortunately, I no longer have access to those sensors, but the code for it should still be there.</p>
+            </article>
+            <aside>
+                <img src="Buried.png" alt="Image of the game Buried" loading="lazy">
+                <p><a href="https://github.com/joaquin-rodrigue/Buried">Here&apos;s the project&apos;s Github repo: https://github.com/joaquin-rodrigue/Buried</a></p>
+            </aside>
         </section>
     </main>
 
-    <section id="contact" class="grey">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 footer">
-                    <p>Email: <a href="mailto:joaquin.philip.rodriguez@gmail.com">joaquin.philip.rodriguez@gmail.com</a></p>
-                    <p>Phone: (208) 412-7136</p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/joaquin-rodrigue/">www.linkedin.com/in/joaquin-rodrigue</a></p>
-                    <p>GitHub: <a href="https://github.com/joaquin-rodrigue">www.github.com/joaquin-rodrigue</a></p>
-                    <p>&copy; Joaquin Rodriguez, 2025</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <footer>
+        <p>Email: <a href="mailto:joaquin.philip.rodriguez@gmail.com">joaquin.philip.rodriguez@gmail.com</a></p>
+        <p>Phone: (208) 412-7136</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/joaquin-rodrigue/">www.linkedin.com/in/joaquin-rodrigue</a></p>
+        <p>GitHub: <a href="https://github.com/joaquin-rodrigue">www.github.com/joaquin-rodrigue</a></p>
+        <p>&copy; Joaquin Rodriguez, 2026</p>
+    </footer>
+
+    <script>
+        const jumpToSection = (selectID) => {
+            document.querySelectorAll("section").forEach((value) => {
+                if (value.id == selectID) {
+                    value.className = "";
+                }
+                else {
+                    value.className = "hide";
+                }
+            });
+        }
+
+        window.onload = () => {
+            document.getElementById("jumptoabout").addEventListener("click", () => jumpToSection("about"));
+            document.getElementById("jumptopermafrost").addEventListener("click", () => jumpToSection("permafrost"));
+            document.getElementById("jumptocms").addEventListener("click", () => jumpToSection("cms"));
+            document.getElementById("jumptoplatform").addEventListener("click", () => jumpToSection("platform"));
+            document.getElementById("jumptoburied").addEventListener("click", () => jumpToSection("buried"));
+        }
+    </script>
 </body>
 
 </html>
