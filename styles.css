@@ -11,7 +11,8 @@
 :root {
     --light-color: #F4F7F5;
     --dark-color: #231826;
-    --mid-dark-color: #585574;
+    --darker-color: #120B1F;
+    --mid-dark-color: #43344f;
     --mid-light-color: #B8BBD4;
     --dark-greens: #76C35C;
     --light-greens: #26930C;
@@ -94,6 +95,7 @@ body.darkmode nav ul li button:active {
     text-align: left;
     font-size: 3em;
     padding: 3px 30px;
+    margin: 5vh 0 0 0;
 }
 
 h2 {
@@ -104,15 +106,25 @@ h2 {
 /* --- Content sections --- */
 main {
     position: absolute;
-    width: 80vw;
-    right: 0;
-    top: 0;
+    width: 70vw;
+    right: 5vw;
+    top: calc(5vh + 4em);
+    background-color: var(--mid-light-color);
+    border-color: var(--mid-dark-color);
+    border-style: solid;
+    border-width: 0px 9px 9px 0px;
+    border-radius: 9px;
+}
+
+body.darkmode main {
+    background-color: var(--mid-dark-color);
+    border-color: var(--darker-color);
 }
 
 section {
-    padding: 24px 12px; 
+    padding: 5vmin;
     display: grid;
-    grid-template-rows: 25% 1fr;
+    grid-template-rows: 15% 1fr;
     grid-template-columns: 50% 50%;
 }
 
@@ -125,21 +137,37 @@ section p {
     font-size: 1.2em;
 }
 
+section a {
+    color: var(--light-greens);
+}
+
+body.darkmode section a {
+    color: var(--dark-greens);
+}
+
 section.hide {
     display: none;
 }
 
+section article {
+    grid-column: 1 / 2;
+}
+
 section aside {
+    grid-column: 2 / 3;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
 /* --- Images --- */
-/* todo: maintain aspect ratio */
 img {
-    max-height: 60vh;
+    max-height: 50vmin;
     max-width: 100%;
+    width: fit-content;
+    object-fit: contain;
+    box-shadow: 0px 0px 3px black;
+    margin: auto;
 }
 
 /* --- GitHub links --- */
@@ -155,11 +183,17 @@ img {
 footer {
     position: absolute;
     bottom: 0vh;
+    width: 100vw;
+    background-color: var(--mid-light-color);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+
+body.darkmode footer {
+    background-color: var(--darker-color);
 }
 
 footer p, footer a {
