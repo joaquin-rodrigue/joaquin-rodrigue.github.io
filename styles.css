@@ -187,7 +187,9 @@ section h2 {
 }
 
 section p {
+    text-align: justify;
     font-size: 1.1em;
+    padding-right: 10px; /* just so it doesnt brush up against the images so much */
 }
 
 section a, body.darkmode section a:hover {
@@ -242,6 +244,36 @@ footer p {
     font-size: 0.75em;
 }
 
+@keyframes slide-from-left {
+    from {
+        display: none;
+        opacity: 0;
+        scale: 0 0;
+        translate: -100vw 0;
+    }
+    to {
+        display: grid;
+        opacity: 1;
+        scale: 1 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes slide-to-right {
+    from {
+        display: grid;
+        opacity: 1;
+        scale: 1 1;
+        translate: 0 0;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        scale: 0 0;
+        translate: 100vw 0;
+    }
+}
+
 /* --- For smaller screens --- */
 @media screen and (max-width: 1024px) {
     nav ul {
@@ -262,9 +294,18 @@ footer p {
         margin: auto;
     }
 
+    section {
+        padding-bottom: 100px;
+        animation-name: slide-from-left;
+    }
+
+    section.hide {
+        animation-name: slide-to-right;
+    }
+
     footer {
-        position: relative;
-        width: auto;
+        position: fixed;
+        bottom: 0vh;
     }
 }
 
@@ -273,5 +314,9 @@ footer p {
     section {
         display: flex;
         flex-direction: column;
+    }
+
+    section p {
+        padding-right: 0;
     }
 }
