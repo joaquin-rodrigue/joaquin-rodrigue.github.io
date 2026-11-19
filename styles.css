@@ -95,8 +95,8 @@ body.darkmode nav ul li button:active {
 #top h1 {
     text-align: left;
     font-size: 3em;
-    padding: 3px 30px;
-    margin: 5vh 0 0 0;
+    padding: 3px 30px 20px 30px;
+    margin: 3vh 0 0 0;
 }
 
 h2 {
@@ -110,27 +110,63 @@ main {
     width: 70vw;
     right: 5vw;
     top: calc(5vh + 4em);
+}
+
+@keyframes slide-from-top {
+    from {
+        display: none;
+        opacity: 0;
+        scale: 0 0;
+        translate: 0 -100vh;
+    }
+    to {
+        display: grid;
+        opacity: 1;
+        scale: 1 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes slide-to-bottom {
+    from {
+        display: grid;
+        opacity: 1;
+        scale: 1 1;
+        translate: 0 0;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        scale: 0 0;
+        translate: 0 100vh;
+    }
+}
+
+section {
+    position: absolute;
     background-color: var(--mid-light-color);
     border-color: var(--mid-dark-color);
     border-style: solid;
     border-width: 0px 9px 9px 0px;
     border-radius: 9px;
-}
-
-body.darkmode main {
-    background-color: var(--mid-dark-color);
-    border-color: var(--darker-color);
-}
-
-section {
     padding: 5vmin;
     display: grid;
     grid-template-rows: 15% 1fr;
     grid-template-columns: 50% 50%;
+    animation-name: slide-from-top;
+    animation-duration: 0.5s;
+}
+
+body.darkmode section {
+    background-color: var(--mid-dark-color);
+    border-color: var(--darker-color);
 }
 
 section.hide {
+    animation-name: slide-to-bottom;
+    animation-duration: 0.5s;
     display: none;
+
 }
 
 section article {
@@ -175,6 +211,10 @@ img {
     border-radius: 3px;
 }
 
+.icon {
+    width: 2em;
+}
+
 /* --- Footer --- */
 footer {
     position: absolute;
@@ -183,7 +223,7 @@ footer {
     background-color: var(--mid-light-color);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }

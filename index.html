@@ -40,8 +40,9 @@
         <section id="about">
             <h2>About Me</h2>
             <article>
-                <p>I&apos;m Joaquin Rodriguez, a software and game developer in Boise State&apos;s Games, Interactive Media and Mobile Technology program. I&apos;m here to show off various projects I&apos;ve worked on throughout the past few years. Enjoy!</p>
+                <p>I&apos;m Joaquin Rodriguez, a software and game developer in Boise State&apos;s Games, Interactive Media and Mobile Technology program. I&apos;m here to show off various projects I&apos;ve worked on throughout the past few years, and maybe even surprise you with some of them. If you're looking for games, websites, or other technical projects, I think you'll enjoy it.</p>
             </article>
+            <!-- todo: make it so multiple images can fit in a box? add trailers? -->
             <aside>
                 <img src="me.jpg" alt="Portrait of me, Joaquin Rodriguez" loading="lazy">
             </aside>
@@ -53,7 +54,9 @@
                 <p>An open-world survival horror game made in Unity, combining procedurally generated terrain with resource management and state machine based enemies.</p>
                 <p>This is my largest project to date, and involved every aspect of indie game development. Programming, systems, 3D art and animation, sound design, UX testing, and more.</p>
                 <p>I am still developing this game, but plan to publish and release it within the next year.</p>
-                <p><a href="https://github.com/joaquin-rodrigue/permafrost">Here&apos;s the project&apos;s github repo: https://github.com/joaquin-rodrigue/permafrost</a></p>
+                <p>
+                    <a href="https://github.com/joaquin-rodrigue/permafrost"><img class="icon" src="githubicon.png" alt="Link to the Permafrost GitHub repository"></a>
+                </p>
             </article>
             <aside>
                 <img alt="Image of the game Permafrost, currently missing" loading="lazy">
@@ -65,7 +68,10 @@
             <article>
                 <p>This website makes several features of a Content Management System in a simple manner using Node.js, Express, and MySQL. </p>
                 <p>Making this involved a little of everything, including (but not limited to) dynamic SQL, server-side logic, handling cookies, dynamicly building webpages and CSS, database structuring and management, general JavaScript development, and more.</p>
-                <p><a href="https://github.com/joaquin-rodrigue/simple-cms">Here&apos;s the project&apos;s GitHub repo: https://github.com/joaquin-rodrigue/simple-cms</a></p>
+                <p>
+                    <a href="https://github.com/joaquin-rodrigue/simple-cms"><img class="icon" src="githubicon.png" alt="Link to the Simple CMS GitHub repository"></a>
+                    <!-- todo: hosting an example? putting that link here? -->
+                </p>
             </article>
             <aside>
                 <img src="simple-cms.png" alt="Image of the CMS website front page/menu" loading="lazy">
@@ -78,7 +84,9 @@
                 <p>This Unity game is a demo concept of a 3-dimensional Platform Fighter game, akin to Super Smash Bros.</p>
                 <p>The game utilizes local multiplayer controls and other general Unity programming.</p>
                 <p>The project is still a demo, but the idea was unique and I am considering fleshing out the ideas further going forward.</p>
-                <p><a href="https://github.com/joaquin-rodrigue/platform-fighter-3d">Here&apos;s the project&apos;s GitHub repo: https://github.com/joaquin-rodrigue/platform-fighter-3d</a></p>
+                <p>
+                    <a href="https://github.com/joaquin-rodrigue/platform-fighter-3d"><img class="icon" src="githubicon.png" alt="Link to the demo's GitHub repository"></a>
+                </p>
             </article>
             <aside>
                 <img src="platform-fighter-demo.png" alt="Image of the Platform Fighter game demo, showing the character select screen" loading="lazy">
@@ -91,7 +99,7 @@
                 <p>This is an old project that was one of my first individual projects in Unity. The game is a 2D platformer using pixel art, level design and programmming made mostly from scratch.</p>
                 <p>I came back to this project a few times to add some better practice features, and originally used it as a demo for an AR integration using Ultraleap hand tracking sensors.</p>
                 <p>When I say old, I mean 3 years ago, but the project was a great introduction to both many Unity features and the AR technology I got to use at the time.</p>
-                <p><a href="https://github.com/joaquin-rodrigue/Buried">Here&apos;s the project&apos;s Github repo: https://github.com/joaquin-rodrigue/Buried</a></p>
+                <p><a href="https://github.com/joaquin-rodrigue/Buried"><img class="icon" src="githubicon.png" alt="Link to the Buried GitHub repository"></a></p>
             </article>
             <aside>
                 <img src="Buried.png" alt="Image of the game Buried" loading="lazy">
@@ -100,15 +108,14 @@
     </main>
 
     <footer>
-        <!-- todo: replace with icons -->
-        <p>Email: <a href="mailto:joaquin.philip.rodriguez@gmail.com">joaquin.philip.rodriguez@gmail.com</a></p>
-        <p>Phone: (208) 412-7136</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/joaquin-rodrigue/">www.linkedin.com/in/joaquin-rodrigue</a></p>
-        <p>GitHub: <a href="https://github.com/joaquin-rodrigue">www.github.com/joaquin-rodrigue</a></p>
+        <p><a href="mailto:joaquin.philip.rodriguez@gmail.com"><img class="icon" src="gmailiconred.png" alt="Link to my Email"></a></p>
+        <p><a href="https://www.linkedin.com/in/joaquin-rodrigue/"><img class="icon" src="linkediniconred.png" alt="Link to my LinkedIn account page"></a></p>
+        <p><a href="https://github.com/joaquin-rodrigue"><img class="icon" src="githubicon.png" alt="Link to my GitHub account"></a></p>
         <p>&copy; Joaquin Rodriguez, 2026</p>
     </footer>
 
     <script>
+        // Listener to change the section currently being shown when you click nav buttons
         const jumpToSection = (selectID) => {
             document.querySelectorAll("section").forEach((value) => {
                 if (value.id == selectID) {
@@ -120,12 +127,30 @@
             });
         }
 
+        // const animationEventListener = (event) => {
+        //     switch (event.type) {
+        //         case "animationstart":
+        //             event.target.
+        //             break;
+        //         case "animationend":
+        //             break;
+        //     }
+        // }
+
+        // adds animation event listeners to the specified element, namely used for sections
+        // const addAnimationListeners = (element) => {
+        //     element.addEventListener("animationstart", animationEventListener);
+        //     element.addEventListener("animationend", animationEventListener);
+        // }
+
         window.onload = () => {
             document.getElementById("jumptoabout").addEventListener("click", () => jumpToSection("about"));
             document.getElementById("jumptopermafrost").addEventListener("click", () => jumpToSection("permafrost"));
             document.getElementById("jumptocms").addEventListener("click", () => jumpToSection("cms"));
             document.getElementById("jumptoplatform").addEventListener("click", () => jumpToSection("platform"));
             document.getElementById("jumptoburied").addEventListener("click", () => jumpToSection("buried"));
+        
+            // document.querySelectorAll("section").forEach((element) => addAnimationListeners(element));
         }
     </script>
 </body>
